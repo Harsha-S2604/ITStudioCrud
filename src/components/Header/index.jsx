@@ -1,4 +1,5 @@
 import Button from "../Common/Button"
+import Form from "../Form"
 
 const Header = ({ heading = '' }) => {
 
@@ -14,9 +15,17 @@ const Header = ({ heading = '' }) => {
                     <h2>{ heading }</h2>
                 </div>
                 <div className="col">
-                    <Button buttonValue='Add User'  size="btn-large" color="btn-outline-primary" styles={buttonStyles}/>
+                    <Button
+                        dataToggle="modal"
+                        dataTarget="formModalCenter"
+                        buttonValue='Add User' 
+                        size="btn-large"
+                        color="btn-outline-primary"
+                        styles={buttonStyles}
+                    />
                 </div>
             </div>
+            <Form />
         </div>
     )
 }
